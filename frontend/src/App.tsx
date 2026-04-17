@@ -4,6 +4,11 @@ import { Upload } from './pages/Upload'
 import { Configure } from './pages/Configure'
 import { Report } from './pages/Report'
 import { PublicReport } from './pages/PublicReport'
+import { ConsultancyLayout } from './components/consultancy/ConsultancyLayout'
+import { ConsultancyHome } from './pages/consultancy/Home'
+import { ConsultancyServices } from './pages/consultancy/Services'
+import { ConsultancyAbout } from './pages/consultancy/About'
+import { ConsultancyContact } from './pages/consultancy/Contact'
 
 function Logo() {
   return (
@@ -32,6 +37,11 @@ function Layout({ children }: { children: React.ReactNode }) {
 
   // Public routes don't get the main layout
   if (location.pathname.startsWith('/public/')) {
+    return <>{children}</>
+  }
+
+  // Consultancy routes use their own layout
+  if (location.pathname.startsWith('/consultancy')) {
     return <>{children}</>
   }
 
@@ -109,6 +119,24 @@ function App() {
         <Route path="/configure/:runId" element={<Configure />} />
         <Route path="/report/:runId" element={<Report />} />
         <Route path="/public/:token" element={<PublicReport />} />
+
+        {/* Parabal Consultancy */}
+        <Route
+          path="/consultancy"
+          element={<ConsultancyLayout><ConsultancyHome /></ConsultancyLayout>}
+        />
+        <Route
+          path="/consultancy/services"
+          element={<ConsultancyLayout><ConsultancyServices /></ConsultancyLayout>}
+        />
+        <Route
+          path="/consultancy/about"
+          element={<ConsultancyLayout><ConsultancyAbout /></ConsultancyLayout>}
+        />
+        <Route
+          path="/consultancy/contact"
+          element={<ConsultancyLayout><ConsultancyContact /></ConsultancyLayout>}
+        />
       </Routes>
     </Layout>
   )

@@ -65,7 +65,7 @@ const testimonials = [
   },
 ]
 
-export function ConsultancyHome() {
+export function Home() {
   return (
     <div>
       {/* Hero */}
@@ -83,7 +83,7 @@ export function ConsultancyHome() {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
               The insight to act,
               <br />
-              <span className="text-gradient bg-gradient-to-r from-brand-400 to-brand-300">the rigour to deliver.</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-brand-300">the rigour to deliver.</span>
             </h1>
 
             <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl">
@@ -91,11 +91,11 @@ export function ConsultancyHome() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/consultancy/contact" className="btn-primary px-7 py-3.5 text-base">
+              <Link to="/contact" className="btn-primary px-7 py-3.5 text-base">
                 Start a Conversation
               </Link>
               <Link
-                to="/consultancy/services"
+                to="/services"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-medium rounded-xl border border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white transition-colors"
               >
                 Explore Services
@@ -107,7 +107,6 @@ export function ConsultancyHome() {
           </div>
         </div>
 
-        {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
@@ -128,9 +127,7 @@ export function ConsultancyHome() {
       {/* Services */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight mb-4">
-            What we do
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight mb-4">What we do</h2>
           <p className="text-neutral-500 max-w-xl mx-auto">
             Four practice areas. One relentless focus: measurable, lasting impact for every client we serve.
           </p>
@@ -147,7 +144,7 @@ export function ConsultancyHome() {
                 <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>
               </div>
               <Link
-                to="/consultancy/services"
+                to="/services"
                 className="mt-auto text-sm font-medium text-brand-600 hover:text-brand-700 flex items-center gap-1.5 transition-colors"
               >
                 Learn more
@@ -173,7 +170,7 @@ export function ConsultancyHome() {
             <p className="text-neutral-500 leading-relaxed mb-8">
               Our consultants bring deep functional expertise combined with the commercial acuity to translate recommendations into revenue, efficiency, and enduring organisational capability.
             </p>
-            <Link to="/consultancy/about" className="btn-secondary">
+            <Link to="/about" className="btn-secondary">
               Meet the team
             </Link>
           </div>
@@ -197,9 +194,7 @@ export function ConsultancyHome() {
       {/* Testimonials */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight mb-4">
-            Clients speak for us
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight mb-4">Clients speak for us</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -228,7 +223,7 @@ export function ConsultancyHome() {
             Tell us about your challenge. We will match you with the right team and respond within one business day.
           </p>
           <Link
-            to="/consultancy/contact"
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 font-semibold rounded-xl hover:bg-brand-50 transition-colors shadow-xl shadow-brand-800/30"
           >
             Get in Touch

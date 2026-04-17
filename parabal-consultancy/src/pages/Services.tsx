@@ -85,10 +85,9 @@ const tagColorMap: Record<string, string> = {
   rose: 'text-rose-500 bg-rose-50',
 }
 
-export function ConsultancyServices() {
+export function Services() {
   return (
     <div>
-      {/* Page header */}
       <section className="bg-neutral-950 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-20" />
         <div className="relative max-w-7xl mx-auto px-6">
@@ -102,7 +101,6 @@ export function ConsultancyServices() {
         </div>
       </section>
 
-      {/* Services list */}
       <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
         {services.map(({ id, tag, title, tagline, description, deliverables, color }) => (
           <div key={id} id={id} className="grid md:grid-cols-2 gap-12 items-start">
@@ -115,7 +113,7 @@ export function ConsultancyServices() {
               <p className="text-neutral-600 leading-relaxed">{description}</p>
 
               <div className="mt-8">
-                <Link to="/consultancy/contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary">
                   Discuss this practice
                 </Link>
               </div>
@@ -140,14 +138,13 @@ export function ConsultancyServices() {
         ))}
       </div>
 
-      {/* CTA */}
       <section className="bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-neutral-900 mb-4 tracking-tight">Not sure which practice fits your need?</h2>
           <p className="text-neutral-500 max-w-lg mx-auto mb-8">
             Share your challenge with us and we will identify the right combination of capabilities — often across more than one practice.
           </p>
-          <Link to="/consultancy/contact" className="btn-primary px-8 py-3.5 text-base">
+          <Link to="/contact" className="btn-primary px-8 py-3.5 text-base">
             Talk to an Advisor
           </Link>
         </div>

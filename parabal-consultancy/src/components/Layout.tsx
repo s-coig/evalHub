@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function Logo() {
   return (
-    <Link to="/consultancy" className="flex items-center gap-3 group">
+    <Link to="/" className="flex items-center gap-3 group">
       <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 flex items-center justify-center shadow-lg shadow-brand-600/25">
         <span className="text-white font-bold text-base tracking-tight">P</span>
       </div>
@@ -16,13 +16,13 @@ function Logo() {
 }
 
 const navLinks = [
-  { to: '/consultancy', label: 'Home' },
-  { to: '/consultancy/services', label: 'Services' },
-  { to: '/consultancy/about', label: 'About' },
-  { to: '/consultancy/contact', label: 'Contact' },
+  { to: '/', label: 'Home' },
+  { to: '/services', label: 'Services' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
 ]
 
-export function ConsultancyLayout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -50,7 +50,7 @@ export function ConsultancyLayout({ children }: { children: React.ReactNode }) {
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
-              <Link to="/consultancy/contact" className="btn-primary text-sm px-5 py-2.5">
+              <Link to="/contact" className="btn-primary text-sm px-5 py-2.5">
                 Get in Touch
               </Link>
             </div>
@@ -90,7 +90,7 @@ export function ConsultancyLayout({ children }: { children: React.ReactNode }) {
               ))}
               <div className="pt-2 border-t border-neutral-100">
                 <Link
-                  to="/consultancy/contact"
+                  to="/contact"
                   onClick={() => setMobileOpen(false)}
                   className="btn-primary w-full justify-center text-sm"
                 >
@@ -124,7 +124,7 @@ export function ConsultancyLayout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-2.5 text-sm text-neutral-400">
                 {['Strategy', 'Digital Transformation', 'Operations', 'Leadership'].map(s => (
                   <li key={s}>
-                    <Link to="/consultancy/services" className="hover:text-white transition-colors">{s}</Link>
+                    <Link to="/services" className="hover:text-white transition-colors">{s}</Link>
                   </li>
                 ))}
               </ul>
@@ -134,8 +134,8 @@ export function ConsultancyLayout({ children }: { children: React.ReactNode }) {
               <h4 className="text-sm font-semibold text-neutral-300 uppercase tracking-wider mb-4">Company</h4>
               <ul className="space-y-2.5 text-sm text-neutral-400">
                 {[
-                  { label: 'About', to: '/consultancy/about' },
-                  { label: 'Contact', to: '/consultancy/contact' },
+                  { label: 'About', to: '/about' },
+                  { label: 'Contact', to: '/contact' },
                 ].map(({ label, to }) => (
                   <li key={label}>
                     <Link to={to} className="hover:text-white transition-colors">{label}</Link>

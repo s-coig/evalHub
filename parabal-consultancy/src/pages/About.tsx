@@ -46,7 +46,7 @@ const values = [
   },
 ]
 
-export function ConsultancyAbout() {
+export function About() {
   return (
     <div>
       {/* Header */}
@@ -158,7 +158,7 @@ export function ConsultancyAbout() {
             Whether you have a defined brief or an unformed challenge, our partners are happy to explore what a Parabal engagement could look like.
           </p>
           <Link
-            to="/consultancy/contact"
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 font-semibold rounded-xl hover:bg-brand-50 transition-colors shadow-xl shadow-brand-800/30"
           >
             Get in Touch

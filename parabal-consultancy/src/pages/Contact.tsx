@@ -15,7 +15,7 @@ const interests = [
   'Other / Not sure yet',
 ]
 
-export function ConsultancyContact() {
+export function Contact() {
   const [form, setForm] = useState({
     name: '',
     email: '',
